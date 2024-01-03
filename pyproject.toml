@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "circuit_py"
+version = "0.1.0"
+description = ""
+authors = ["aemakeye <aemakeye@gmail.com>"]
+readme = "README.md"
+packages = [{include = "circuit_analyser"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+attrs = "^23.1.0"
+xmltodict = "^0.13.0"
+numpy = "^1.26.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = [
+    "."
+]
+log_cli = true
+log_cli_level = "INFO"
